@@ -26,7 +26,7 @@ RegisterCommand('propfix', function(source, args, rawCommand)
         }, function(rowsChanged)
             if rowsChanged > 0 then
                 TriggerEvent('esx:playerLoaded', playerId, defaultPlayer, true)
-                TriggerClientEvent('chat:addMessage', playerId, {args = {'^1SYSTEM', '^0Twoja postać została zresetowana w tym samym miejscu.'}})
+                TriggerClientEvent('chat:addMessage', playerId, {args = {'^1SYSTEM', '^0Zresetowałeś postać.'}})
             else
                 TriggerClientEvent('chat:addMessage', playerId, {args = {'^1SYSTEM', '^0Wystąpił błąd. Spróbuj ponownie później. Jeśli nie działa, zgłoś, to adminstracji.'}})
             end
